@@ -1,0 +1,31 @@
+{
+  "name": "freelance-currency-js",
+  "version": "1.0.0",
+  "description": "Convert an invoice amount between currencies with a live exchange rate (or a manual one, offline). Zero dependencies, runs via npx straight from GitHub.",
+  "bin": {
+    "freelance-currency": "./index.js"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "license": "MIT",
+  "author": "kleogeos",
+  "keywords": [
+    "freelance",
+    "invoice",
+    "currency",
+    "exchange-rate",
+    "cli",
+    "zero-dependencies",
+    "npx"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kleogeos/freelance-currency-js"
+  },
+  "homepage": "https://kleogeos.github.io/freelancer-tools/"
+}
