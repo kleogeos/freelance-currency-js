@@ -89,7 +89,7 @@ check your country's official source.
 
 Prefer Python, or need it as a library import? [freelance-currency-cli](https://github.com/kleogeos/freelance-currency-cli) has the same logic. Other `npx`-runnable ports: [freelance-rate-js](https://github.com/kleogeos/freelance-rate-js) · [freelance-invoice-js](https://github.com/kleogeos/freelance-invoice-js) · [contract-checklist-js](https://github.com/kleogeos/contract-checklist-js) · [freelance-late-fee-js](https://github.com/kleogeos/freelance-late-fee-js).
 
-Free and will stay free. If it saved you time: [tip with crypto](https://kleogeos.github.io/freelancer-tools/donate.html).
+Free and will stay free. If it saved you time: [tip with crypto](https://kleogeos.github.io/freelancer-tools/donate.html?src=cli-currency-js).
 
 ## License
 
