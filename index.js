@@ -39,8 +39,29 @@ function fetchRate(base, quote) {
   });
 }
 
+// Correctly-rounded cents (ties-to-even) from the exact binary value of a
+// double -- a naive Math.round(n*100)/100 can manufacture a spurious tie
+// that Python's round(n, 2) (rounding from the true binary value) would not.
 function round2(n) {
-  return Math.round((n + Number.EPSILON) * 100) / 100;
+  if (n === 0) return 0;
+  const neg = n < 0;
+  const ax = Math.abs(n);
+  const s = ax.toFixed(20);
+  const [intPart, fracPart] = s.split(".");
+  const keep = fracPart.slice(0, 2);
+  const rest = fracPart.slice(2);
+  let roundUp;
+  if (rest[0] > "5") roundUp = true;
+  else if (rest[0] < "5") roundUp = false;
+  else {
+    const restAfter = rest.slice(1).replace(/0+$/, "");
+    if (restAfter.length > 0) roundUp = true;
+    else roundUp = parseInt(keep[1] || "0", 10) % 2 === 1;
+  }
+  let keepNum = BigInt(intPart + keep.padEnd(2, "0"));
+  if (roundUp) keepNum += 1n;
+  const result = Number(keepNum) / 100;
+  return neg ? -result : result;
 }
 
 // mirrors Python's repr() of a float: integers keep a trailing ".0",
