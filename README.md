@@ -91,6 +91,9 @@ Prefer Python, or need it as a library import? [freelance-currency-cli](https://
 
 Free and will stay free. If it saved you time: [tip with crypto](https://kleogeos.github.io/freelancer-tools/donate.html?src=cli-currency-js).
 
+
+Using the invoice generator a lot? [Telegram subscription bot](https://t.me/freelancerkitbot) — 250 Stars/month (~$3.25), unlimited invoices generated and sent right in chat, cancel anytime (`/subscribe`).
+
 ## License
 
 MIT — do whatever you want with it.
